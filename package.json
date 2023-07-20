@@ -1,9 +1,14 @@
 {
-  "name": "@stdlib/esm",
+  "name": "stdlib-stats-chi2test",
   "version": "0.0.3",
   "description": "ES module distribution for Stdlib, a standard library for JavaScript and Node.js.",
   "license": "Apache-2.0",
-  "main": "./index.js",
+  "module": "dist/stdlibjs-stats-chi2test.esm.min.js",
+  "browser": "dist/stdlibjs-stats-chi2test.umd.min.js",
+  "main": "dist/stdlibjs-stats-chi2test.esm.min.js",
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "author": {
     "name": "The Stdlib Authors",
@@ -16,6 +21,7 @@
     }
   ],
   "scripts": {
+    "build": "rollup -c",
     "clean": "npm run clean:api_docs:app",
     "install:development": "npm run install:production",
     "install:production": "npm install && npm run install:stdlib",
@@ -42,8 +48,8 @@
   "bugs": {
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
     "@skypack/package-check": "^0.2.2"
   }
 }
